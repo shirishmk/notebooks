@@ -1,0 +1,16 @@
+{
+  "name": "Miniconda Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "llvm-vs-code-extensions.vscode-clangd"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install ipykernel && python -m ipykernel install --user --name=devcontainer"
+}
