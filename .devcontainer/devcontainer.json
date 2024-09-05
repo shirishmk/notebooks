@@ -12,5 +12,9 @@
       ]
     }
   },
-  "postCreateCommand": "pip install ipykernel && python -m ipykernel install --user --name=devcontainer"
+  "postCreateCommand": "pip install ipykernel && python -m ipykernel install --user --name=devcontainer",
+  "mounts": [
+    "type=bind,source=${localWorkspaceFolder},target=/work",
+    "type=bind,source=/home/${localEnv:USER}/.ssh,target=/home/vscode/.ssh,readonly"
+]
 }
